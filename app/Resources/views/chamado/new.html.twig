@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Criação de Chamado</h1>
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+        <input type="submit" value="Criar" />
+    {{ form_end(form) }}
+
+    <ul>
+        <li>
+            <a href="{{ path('chamado_index') }}">Voltar para a lista</a>
+        </li>
+    </ul>
+{% endblock %}

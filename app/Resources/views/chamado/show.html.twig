@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Visualizar Chamado</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>ID: </th>
+                <td>{{ chamado.id }}</td>
+            </tr>
+            <tr>
+                <th>Solicitante: </th>
+                <td>{{ chamado.solicitante }}</td>
+            </tr>
+            <tr>
+                <th>Assunto: </th>
+                <td>{{ chamado.assunto }}</td>
+            </tr>
+            <tr>
+                <th>Descrição: </th>
+                <td>{{ chamado.descricao }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+            
+    <style rel="stylesheet">
+        ul.none {
+            list-style-type: none;
+            }
+    </style>        
+            
+    <ul class="none">
+        <li>
+            <a href="{{ path('chamado_index') }}">Voltar para a lista</a>
+        </li>
+        <li>
+            <a href="{{ path('chamado_edit', { 'id': chamado.id }) }}">Editar</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Excluir">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Editar Chamado</h1>
+
+    {{ form_start(edit_form) }}
+        {{ form_widget(edit_form) }}
+        <ul class ="none">
+            <li><input type="submit" value="Editar" /></li>
+        </ul>
+    {{ form_end(edit_form) }}
+    
+    <style rel="stylesheet">
+        ul.none {
+            list-style-type: none;
+            }
+    </style>
+
+    <ul class = "none">
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Excluir">
+            {{ form_end(delete_form) }}
+        </li>
+            <li>
+                <p></p>
+                <p><a href="{{ path('chamado_index') }}">Voltar</a></p>
+        </li>
+    </ul>
+{% endblock %}
