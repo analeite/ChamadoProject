@@ -1,36 +1,39 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Visualizar Chamado</h1>
+    <div class="panel panel-info">
+        
+        <div class="panel-heading">
+            <h4>Visualizar Chamado</h4>
+        </div>
+        
+        <table class="table table-hover">
+            <thead>
+                <th>ID</th>
+                <th>Solicitante</th>
+                <th>Assunto</th>
+                <th>Descrição</th>
+            </thead>
+            <tbody>
+                {# {% for chamado in chamados %}#}
+                <tr>
+                    <td>{{ chamado.id }}</td>
+                    <td>{{ chamado.solicitante }}</td>
+                    <td>{{ chamado.assunto }}</td>
+                    <td>{{ chamado.descricao }}</td>
+                </tr>
+                {#{% endfor %}#}
+            </tbody>
+        </table>
+    </div>
 
-    <table>
-        <tbody>
-            <tr>
-                <th>ID: </th>
-                <td>{{ chamado.id }}</td>
-            </tr>
-            <tr>
-                <th>Solicitante: </th>
-                <td>{{ chamado.solicitante }}</td>
-            </tr>
-            <tr>
-                <th>Assunto: </th>
-                <td>{{ chamado.assunto }}</td>
-            </tr>
-            <tr>
-                <th>Descrição: </th>
-                <td>{{ chamado.descricao }}</td>
-            </tr>
-        </tbody>
-    </table>
 
-            
     <style rel="stylesheet">
         ul.none {
             list-style-type: none;
-            }
+        }
     </style>        
-            
+
     <ul class="none">
         <li>
             <a href="{{ path('chamado_index') }}">Voltar para a lista</a>
@@ -40,7 +43,7 @@
         </li>
         <li>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Excluir">
+            <input type="submit" value="Excluir">
             {{ form_end(delete_form) }}
         </li>
     </ul>

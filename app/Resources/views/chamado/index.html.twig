@@ -1,49 +1,48 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Lista de Chamados</h1>
+    {#    <div class="container">#}
+    <div class="panel panel-primary">
 
-    <table>
-        <thead>
-            <tr>
-                <!--<th>Id</th>
-                <th>Descrição</th>
+        <div class="panel-heading">
+            <h4>Lista de Chamados</h4>
+        </div>
+        
+        <table class="table table-hover">
+            <thead>
+                <th>ID</th>
                 <th>Solicitante</th>
                 <th>Assunto</th>
-                <th>Actions</th>-->
-            </tr>
-        </thead>
-        <tbody>
-        {% for chamado in chamados %}
-            <tr>
-            <tr><th>ID: </th>
-                <td><a href="{{ path('chamado_show', { 'id': chamado.id }) }}">{{ chamado.id }}</a></td></tr>
-            <tr>
-                <th>Solicitante: </th>
-                <td>{{ chamado.solicitante }}</td></tr>
-            <tr><th>Assunto: </th>
-                <td>{{ chamado.assunto }}</td></tr>
-             <tr>
-                <th>Descrição: </th>
-                <td>{{ chamado.descricao }}</td></tr>
-                <td>
-                    <ul>
-                        <li>
+                <th>Descrição</th>
+                <th>Ação</th>
+            </thead>
+            <tbody>
+                {% for chamado in chamados %}
+                    <tr>
+                        <td><a href="{{ path('chamado_show', { 'id': chamado.id }) }}">{{ chamado.id }}</a></td>
+                        <td>{{ chamado.solicitante }}</td>
+                        <td>{{ chamado.assunto }}</td>                
+                        <td>{{ chamado.descricao }}</td>
+                        <td>
+                            {#<ul>
+                                <li>#}
                             <a href="{{ path('chamado_show', { 'id': chamado.id }) }}">Visualizar</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('chamado_edit', { 'id': chamado.id }) }}">Editar</a>
-                        </li>
-                    </ul>
-                </td>
-            </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+                            {#</li>
+                            <li>#}
+                            <br><a href="{{ path('chamado_edit', { 'id': chamado.id }) }}">Editar</a>
+                            {#</li>
+                        </ul>#}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {#    </div>#}
 
-    <ul>
-        <li>
-            <a href="{{ path('chamado_new') }}">Criar um novo chamado</a>
-        </li>
-    </ul>
+    {#<ul>
+        <li>#}
+        <a class="btn btn-primary" href="{{ path('chamado_new') }}" role="button">Criar um novo chamado</a>
+    {# </li>
+ </ul>#}
 {% endblock %}

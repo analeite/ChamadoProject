@@ -3,15 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/ChamadoProject/app/Resources/views/chamado/edit.html.twig</file>
-            <file>file:/C:/xampp/htdocs/ChamadoProject/src/ChamadoBundle/Resources/views/Default/index.html.twig</file>
-            <file>file:/C:/xampp/htdocs/ChamadoProject/app/Resources/views/base.html.twig</file>
-            <file>file:/C:/xampp/htdocs/ChamadoProject/app/Resources/views/chamado/show.html.twig</file>
-            <file>file:/C:/xampp/htdocs/ChamadoProject/app/Resources/views/chamado/index.html.twig</file>
-            <file>file:/C:/xampp/htdocs/ChamadoProject/app/config/config.yml</file>
-            <file>file:/C:/xampp/htdocs/ChamadoProject/app/Resources/views/chamado/new.html.twig</file>
-            <file>file:/C:/xampp/htdocs/ChamadoProject/src/ChamadoBundle/Form/ChamadoType.php</file>
-            <file>file:/C:/xampp/htdocs/ChamadoProject/src/ChamadoBundle/Controller/DefaultController.php</file>
+            <file>file:/C:/Users/ana.leite/Documents/GitHubCP/ChamadoProject/app/Resources/views/base.html.twig</file>
+            <file>file:/C:/Users/ana.leite/Documents/GitHubCP/ChamadoProject/app/Resources/views/chamado/index.html.twig</file>
+            <file>file:/C:/Users/ana.leite/Documents/GitHubCP/ChamadoProject/app/Resources/views/chamado/show.html.twig</file>
+            <file>file:/C:/Users/ana.leite/Documents/GitHubCP/ChamadoProject/src/ChamadoBundle/Controller/ChamadoController.php</file>
+            <file>file:/C:/Users/ana.leite/Documents/GitHubCP/ChamadoProject/src/ChamadoBundle/Resources/views/Default/index.html.twig</file>
         </group>
     </open-files>
 </project-private>
